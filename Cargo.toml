@@ -1,0 +1,17 @@
+[package]
+name = "yama"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+polars = { version = "0.44.2", features = [
+    "lazy",
+    "rolling_window",
+    "pct_change",
+    "cum_agg",
+] }
+tokio = { version = "1", features = ["full"] }
+yahoo_finance_api = "2.3.0"
+time = { version = "0.3", features = ["macros", "formatting"] }
+plotters = { version = "0.3.7", features = ["chrono"] }
+chrono = "0.4.38"
